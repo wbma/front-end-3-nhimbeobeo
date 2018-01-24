@@ -9,7 +9,7 @@ import {DigitransitService} from '../services/digitransit.service';
 })
 export class ListMediaComponent implements OnInit {
   mediaArray: any;
-  routeArray: any;
+  stopArray: any;
 
   constructor(public mediaService: MediaService, private digitransitService: DigitransitService) {
   }
@@ -27,7 +27,7 @@ export class ListMediaComponent implements OnInit {
     });
     this.digitransitService.getRoutes('Gransinmäki').subscribe(response => {
       console.log(response);
-      this.routeArray = response['data'].stops;
+      this.stopArray = response['data'].stops;
     });
   }
 }

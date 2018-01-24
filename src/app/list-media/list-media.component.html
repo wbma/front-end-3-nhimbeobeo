@@ -5,8 +5,10 @@
     <p>{{media.description}}</p>
   </li>
 </ul>
-<div *ngFor="let route of routeArray">
-  <li *ngFor="let stop of route.patterns">
-    {{stop.name}}
+
+<div *ngFor="let stop of stopArray">
+  <li *ngFor="let line of stop.patterns">
+    {{line.route.shortName}}
+    {{line.route.longName}}
   </li>
 </div>
