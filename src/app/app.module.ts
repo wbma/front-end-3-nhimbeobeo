@@ -9,6 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {DigitransitService} from './services/digitransit.service';
 import {FormsModule} from '@angular/forms';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgbModule.forRoot()
   ],
   providers: [MediaService, DigitransitService],
   bootstrap: [AppComponent]
